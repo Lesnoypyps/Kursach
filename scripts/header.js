@@ -2,41 +2,34 @@
 
 const header = document.querySelector('.header');
 
-const headerWrapper = document.createElement('div')
-const logo = document.createElement('div');
-const logoText = document.createElement('p');
-const logoIcon = document.createElement('img');
-const headerNav = document.createElement('div');
-const navTickets = document.createElement('a');
-const navContacts = document.createElement('a');
-const navAbout = document.createElement('a');
-const profile = document.createElement('div');
-const profileIcon = document.createElement('img');
-
-headerWrapper.classList = 'header__wrapper';
-logo.classList = 'header__logo';
-logoText.classList = 'logo__text';
-logoIcon.classList = 'logo__icon icon';
-headerNav.classList = 'header__nav';
-navTickets.classList = 'nav__tickets';
-navContacts.classList = 'nav__contacts';
-navAbout.classList = 'nav__about';
-profile.classList = 'header__profile';
-profileIcon.classList = 'profile__icon icon'
-
-logoIcon.src = '../image/logo__img.svg';
-logoText.textContent = 'TicketSale';
-logo.append(logoIcon);
-logo.append(logoText);
-navTickets.textContent = 'Билеты';
-navContacts.textContent = 'Контакты';
-navAbout.textContent = 'О нас';
-headerNav.append(navTickets);
-headerNav.append(navAbout);
-headerNav.append(navContacts);
-profileIcon.src = '../image/profile-icon.svg';
-profile.append(profileIcon);
-headerWrapper.append(logo);
-headerWrapper.append(headerNav);
-headerWrapper.append(profile);
-header.append(headerWrapper);
+header.insertAdjacentHTML('beforeend',
+    `<div class="header__wrapper">
+            <div class="header__logo">
+                <a href="#" class="logo__link">
+                    <img class="logo__icon icon" src="../image/logo__img.svg">
+                    <p class="logo__text">TicketSale</p>
+                </a>
+            </div>
+            <div class="header__nav">
+                <a class="nav__tickets">Билеты</a>
+                <a class="nav__about">О нас</a>
+                <a class="nav__contacts">Контакты</a>
+            </div>
+            <div class="header__profile">
+                <img class="profile__icon icon" src="../image/profile-icon.svg" style="width: 30px">
+            </div>
+            
+          </div>
+          <div class="ticket-found">
+            <div class="ticket-found__text">
+                <h1 class="ticket-found__heading">Быстрый поиск билетов</h1>
+            </div>
+            <div class="ticket-found__input">
+                <form action="" method="post" class="form-found">
+                    <input type="text" class="from fast-found" placeholder="Откуда"><input type="text" class=" fast-found" placeholder="Куда">
+                    <input type="text" class="text fast-found" placeholder="Отправление"><input type="text" class="text fast-found" placeholder="Прибытие"><input type="text" class="text fast-found" placeholder="">
+                    <input type="submit" value="Найти билеты" class="submit">
+                </form>
+            </div>  
+          </div>  
+`)

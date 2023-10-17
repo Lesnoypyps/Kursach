@@ -8,7 +8,7 @@
     background-color: #0085FF;
 }
 .header__wrapper{
-    max-width: 1200px;
+    width: 75%;
     margin: 0 auto;
     color: white;
     display: flex;
@@ -16,11 +16,13 @@
     align-items: center;
     padding: 10px;
 }
-.header__logo{
+.logo__link{
     display: flex;
     gap: 5px;
     align-items: center;
     font-size: 20px;
+    color: white;
+    text-decoration: none;
 }
 .header__nav{
     width: 60%;
@@ -30,3 +32,49 @@
 /*.header__nav *{*/
 /*    margin-left: 100px;*/
 /*}*/
+.header{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+.ticket-found__input{
+    /*display: flex;*/
+    /*gap: 2px;*/
+}
+.fast-found{
+    border: 0;
+    padding: 10px 5px 10px 5px;
+
+}
+.form-found{
+    display: flex;
+    gap: 3px;
+}
+.fast-found:first-child{
+    border-start-start-radius: 10px;
+    border-end-start-radius: 10px;
+}
+.fast-found:nth-child(5){
+    border-start-end-radius: 10px;
+    border-end-end-radius: 10px;
+    margin-right: 10px;
+}
+.ticket-found{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.submit{
+    border: 0;
+    border-radius: 5px;
+    background-color: #FF9243;
+    font-size: 16px;
+    padding: 10px;
+    color: white;
+}
+.ticket-found__heading{
+    color: white;
+    margin-bottom: 10px;
+}
