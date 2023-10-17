@@ -1,0 +1,32 @@
+@import 'fonts.css';
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+.header{
+    background-color: #0085FF;
+}
+.header__wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+.header__logo{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    font-size: 20px;
+}
+.header__nav{
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+}
+/*.header__nav *{*/
+/*    margin-left: 100px;*/
+/*}*/
