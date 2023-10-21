@@ -27,7 +27,11 @@ header.insertAdjacentHTML('beforeend',
             <div class="ticket-found__input">
                 <form action="" method="post" class="form-found">
                     <input type="text" class="from fast-found" placeholder="Откуда"><input type="text" class=" fast-found" placeholder="Куда">
-                    <input type="text" class="text fast-found" placeholder="Отправление"><input type="text" class="text fast-found" placeholder="Прибытие"><input type="text" class="text fast-found" placeholder="">
+                    <input type="text" class="text fast-found" placeholder="Отправление"><input type="text" class="text fast-found" placeholder="Прибытие">
+                    <div class="text fast-found">
+                        <p class="flight-class">Эконом</p>
+                        <p class="fast-found__passenger">1 пассажир</p>
+                    </div>
                     <input type="submit" value="Найти билеты" class="submit">
                 </form>
             </div>  

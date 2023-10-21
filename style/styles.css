@@ -47,6 +47,9 @@
     padding: 10px 5px 10px 5px;
 
 }
+.fast-found::placeholder{
+    font-size: 16px;
+}
 .form-found{
     display: flex;
     gap: 3px;
@@ -56,9 +59,14 @@
     border-end-start-radius: 10px;
 }
 .fast-found:nth-child(5){
+    background-color: white;
     border-start-end-radius: 10px;
     border-end-end-radius: 10px;
     margin-right: 10px;
+    padding: 10px 20px 10px 10px;
+    cursor: pointer;
+
+
 }
 .ticket-found{
     display: flex;
@@ -77,4 +85,9 @@
 .ticket-found__heading{
     color: white;
     margin-bottom: 10px;
+}
+
+.fast-found__passenger{
+    font-size: 14px;
+    color: grey;
 }
