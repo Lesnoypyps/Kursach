@@ -4,10 +4,11 @@
     padding:0;
     box-sizing: border-box;
 }
-.header{
+.header,.footer{
     background-color: #0085FF;
 }
-.header__wrapper{
+
+.header__wrapper,.footer__wrapper{
     width: 75%;
     margin: 0 auto;
     color: white;
@@ -32,7 +33,7 @@
 /*.header__nav *{*/
 /*    margin-left: 100px;*/
 /*}*/
-.header{
+.header,.footer{
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -47,9 +48,7 @@
     padding: 10px 5px 10px 5px;
 
 }
-.fast-found::placeholder{
-    font-size: 16px;
-}
+
 .form-found{
     display: flex;
     gap: 3px;
@@ -91,43 +90,107 @@
     font-size: 14px;
     color: grey;
 }
+.main{
+    max-width: 700px;
+    margin: 0 auto;
+}
 .slider__container {
     /*position: relative;*/
-    width: 600px;
-    height: 300px;
+
     margin: 0 auto;
     overflow: hidden;
 }
 .slider{
     display: flex;
     transition: transform 0.5s ease-in-out;
-    height: 100%;
+    height: 400px;
 }
 .slide{
     width: 100%;
-    height: 100%;
+    height: 80%;
     background-repeat:no-repeat;
-    background-position: center center;
     object-fit: cover;
-    padding: 10px;
+    background-size: cover ;
+    background-position: center center ;
+    padding: 20px;
     /*display: flex;*/
     /*flex-direction: column;*/
     /*align-items: end;*/
-    /*position: relative;*/
+    position: relative;
+    border-radius: 20px;
 }
 .slide-tint{
     background-color: rgba(0,0,0,.5);
     background-blend-mode: multiply;
 }
 .capital-name{
-    /*position: absolute;*/
-    /*bottom: 40px;*/
+    position: absolute;
+    bottom: 60px;
     font-weight: bold;
     color: white;
     font-size: 20px;
 }
 .country-name{
-    bottom: 30px;
+    position: absolute;
+    bottom: 5px;
     color: white;
     font-size: 15px;
+}
+.slider__header{
+    padding: 10px 0 10px 0;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.fast-found{
+    font-weight:bolder;
+    font-size: 16px;
+}
+.f-f-block{
+    font-weight: normal;
+}
+.fast-found::placeholder{
+    font-weight: normal;
+}
+.slider-button{
+    padding: 11px 19px 11px 19px;
+    border: transparent;
+    border-radius: 50%;
+    font-size: 24px;
+}
+.slogan{
+    max-width: 400px;
+}
+.stock__content{
+    margin: 13px 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+}
+.stock{
+    background-color: #FF9243;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+
+}
+.stock-gradient-image{
+    border-radius: 20px;
+    background: linear-gradient(90deg, #FF9243 0.3%, rgba(255, 146, 67, 0.00) 127%), url('../image/city-orange.jpg');
+    background-size: cover;
+    width: 253px;
+    height: 147px;
+    flex-shrink: 0;
+}
+.stock__buy{
+    max-width: 250px;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+    display: flex;
+    border: transparent;
+    background-color: white;
+    border-radius:10px;
 }
