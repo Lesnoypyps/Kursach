@@ -7,7 +7,7 @@ export const createHeader = () =>{
         `<div class="header__wrapper">
             <div class="header__logo">
                 <a href="#" class="logo__link">
-                    <img class="logo__icon icon" src="../image/logo__img.svg" alt="Logo">
+                    <img class="logo__icon icon" src="./image/logo__img.svg" alt="Logo">
                     <p class="logo__text">TicketSale</p>
                 </a>
             </div>
@@ -17,11 +17,12 @@ export const createHeader = () =>{
                 <a class="nav__contacts">Контакты</a>
             </div>
             <div class="header__profile">
-                <img class="profile__icon icon" src="../image/profile-icon.svg" style="width: 30px" alt="profile">
+                <img class="profile__icon icon" src="./image/profile-icon.svg" style="width: 30px" alt="profile">
             </div>
             
           </div>
-          <div class="ticket-found">
+          <div class="form-container container">
+            <div class="ticket-found">
             <div class="ticket-found__text">
                 <h1 class="ticket-found__heading">Быстрый поиск билетов</h1>
             </div>
@@ -35,7 +36,8 @@ export const createHeader = () =>{
                     </div>
                     <input type="submit" value="Найти билеты" class="submit">
                 </form>
-            </div>  
+            </div>
+          </div>  
           </div>  
 `)
 }

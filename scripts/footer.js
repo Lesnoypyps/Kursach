@@ -5,7 +5,7 @@ export const createFooter = () =>{
         `<div class="footer__wrapper">
             <div class="footer__logo">
                 <a href="#" class="logo__link">
-                    <img class="logo__icon icon" src="../image/logo__img.svg" alt="Logo">
+                    <img class="logo__icon icon" src="./image/logo__img.svg" alt="Logo">
 <!--                    <p class="logo__text">TicketSale</p>-->
                 </a>
             </div>
