@@ -5,11 +5,11 @@ export const createHeader = () =>{
 
     header.insertAdjacentHTML('beforeend',
         `<div class="header__wrapper">
-            <div class="header__logo">
-                <a href="#" class="logo__link">
-                    <img class="logo__icon icon" src="./image/logo__img.svg" alt="Logo">
-                    <p class="logo__text">TicketSale</p>
-                </a>
+                <div class="header__logo">
+                    <a href="#" class="logo__link">
+                        <img class="logo__icon icon" src="./image/logo__img.svg" alt="Logo">
+                        <p class="logo__text">TicketSale</p>
+                    </a>
             </div>
             <div class="header__nav">
                 <a class="nav__tickets">Билеты</a>

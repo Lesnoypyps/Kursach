@@ -1,10 +1,5 @@
 export const slider = () =>{
-    const slides = document.querySelectorAll('.slide');
-    console.log(slides[0])
-    const prevButton = document.querySelector('.prev-button');
-    const nextButton = document.querySelector('.next-button');
-    const slideCount = slides.length;
-    let slideIndex = 0;
+    const slides = document.querySelectorAll('.swiper-slide');
 
     let datasetSlides = [
         'image/fiji-island.jpg',
@@ -52,32 +47,41 @@ export const slider = () =>{
         slides[i].style.backgroundImage = `url(${datasetSlides[i]})`;
         const capital = slides[i].querySelector('.capital-name');
         const country = slides[i].querySelector('.country-name');
-        capital.textContent = dataSetSlidesText[i].city;
-        country.textContent = dataSetSlidesText[i].description;
+        // capital.textContent = dataSetSlidesText[i].city;
+        // country.textContent = dataSetSlidesText[i].description;
     }
 
-    function showPreviousSlide() {
-        slideIndex = (slideIndex - 1 + slideCount) % slideCount;
-        updateSlider();
-    }
+//     function showPreviousSlide() {
+//         slideIndex = (slideIndex - 1 + slideCount) % slideCount;
+//         updateSlider();
+//     }
+//
+// // Функция для показа следующего слайда
+//     function showNextSlide() {
+//         slideIndex = (slideIndex + 1) % slideCount;
+//         updateSlider();
+//     }
+//
+//     function updateSlider() {
+//         slides.forEach((slide, index) => {
+//             if (index === slideIndex) {
+//                 slide.style.display = 'block';
+//             } else {
+//                 slide.style.display = 'none';
+//             }
+//         });
+//     }
+//     prevButton.addEventListener('click',showPreviousSlide)
+//     nextButton.addEventListener('click', showNextSlide);
+//     updateSlider();
+    const swiper = new Swiper('.swiper',{
+        direction:'horizontal',
+        loop:true,
 
-// Функция для показа следующего слайда
-    function showNextSlide() {
-        slideIndex = (slideIndex + 1) % slideCount;
-        updateSlider();
-    }
-
-    function updateSlider() {
-        slides.forEach((slide, index) => {
-            if (index === slideIndex) {
-                slide.style.display = 'block';
-            } else {
-                slide.style.display = 'none';
-            }
-        });
-    }
-    prevButton.addEventListener('click',showPreviousSlide)
-    nextButton.addEventListener('click', showNextSlide);
-    updateSlider();
+        navigation:{
+            prevEl:'.swiper-button-prev',
+            nextEl:'.swiper-button-next'
+        },
+    })
 }
 
