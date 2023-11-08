@@ -1,8 +1,15 @@
 @import 'fonts.css';
+@import 'cdn.jsdelivr.net_npm_swiper@11_swiper-bundle.min.css';
 *{
     margin: 0;
     padding:0;
     box-sizing: border-box;
+}
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 .header,.footer{
     background-color: #0085FF;
@@ -57,16 +64,7 @@
     border-start-start-radius: 10px;
     border-end-start-radius: 10px;
 }
-.fast-found:nth-child(5){
-    background-color: white;
-    border-start-end-radius: 10px;
-    border-end-end-radius: 10px;
-    margin-right: 10px;
-    padding: 10px 20px 10px 10px;
-    cursor: pointer;
 
-
-}
 .ticket-found{
     display: flex;
     flex-direction: column;
@@ -118,9 +116,9 @@
     color: white;
     font-size: 20px;
 }
-.country-name{
+.capital-description{
     position: absolute;
-    bottom: 5px;
+    bottom: 25px;
     color: white;
     font-size: 15px;
 }
@@ -137,6 +135,12 @@
 }
 .f-f-block{
     font-weight: normal;
+    background-color: white;
+    border-start-end-radius: 10px;
+    border-end-end-radius: 10px;
+    margin-right: 10px;
+    padding: 10px 20px 10px 10px;
+    cursor: pointer;
 }
 .fast-found::placeholder{
     font-weight: normal;
@@ -166,11 +170,12 @@
 }
 .stock-gradient-image{
     border-radius: 20px;
-    background: linear-gradient(90deg, #FF9243 0.3%, rgba(255, 146, 67, 0.00) 127%), url('../image/city-orange.jpg');
+    background: linear-gradient(90deg, #FF9243 0.3%, rgba(255, 146, 67, 0.00) 120%), url('../image/city-orange.jpg');
     background-size: cover;
     width: 253px;
     height: 147px;
     flex-shrink: 0;
+    overflow: hidden;
 }
 .stock__buy{
     max-width: 250px;
@@ -196,11 +201,105 @@
     background-blend-mode: multiply;
 
 }
-.footer{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+.footer {
+    /* Чтобы footer не уменьшался */
+    flex-shrink: 0;
 }
 .swiper-button-next::after,.swiper-button-prev::after{
     color: white;
+}
+.burger-menu{
+    width: 10px;
+    height: 1px;
+    background-color: white;
+
+}
+.burger-menu{
+    display: none;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    background-color: transparent;
+    align-items: center;
+}
+.burger-menu-line{
+    width: 30px;
+    height: 2px;
+    border-radius: 5px;
+    background-color: white;
+
+}
+.burger-menu-line:after,.burger-menu-line:before{
+    content: "";
+    width: 30px;
+    height: 2.5px;
+    border-radius: 5px;
+    background-color: white;
+    position: absolute;
+}
+.burger-menu-line:after{
+    bottom: 0;
+
+}
+.burger-menu-line:before{
+    top: 0;
+}
+@media screen and (max-width:426px){
+    p{
+        font-size: 14px;
+    }
+
+    .main,.header__wrapper,.footer__wrapper{
+        max-width: 360px;
+    }
+    .header__wrapper{
+        justify-content: space-between;
+    }
+    .ticket-found__text{
+        font-size: 14px;
+    }
+    .burger-menu{
+        display: flex;
+    }
+    .profile__icon,.footer__slogan,.header__nav,.logo__text{
+        display: none;
+    }
+    .form-found{
+        display: grid;
+        grid-template-columns: 139px 139px;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+    .fast-found{
+        max-width: 138px;
+    }
+    .fast-found:first-child{
+        border-bottom-left-radius: 0;
+    }
+    .fast-found:nth-child(2){
+        border-top-right-radius: 10px;
+    }
+    .f-f-block{
+        border-start-end-radius: 0;
+        margin: 0;
+        max-width: 280px;
+        display: inline-grid;
+        grid-column-start: 1;
+        grid-column-end:3;
+        border-bottom-left-radius: 10px;
+    }
+    .submit{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .stock{
+        max-height: 200px;
+    }
+    .stock-gradient-image{
+        width: 140px;
+        height: 11em;
+        background-position: center center;
+    }
+    .button-arrow{
+        display: none;
+    }
 }

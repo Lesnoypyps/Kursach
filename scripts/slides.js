@@ -1,3 +1,4 @@
+import {Swiper} from './cdn.jsdelivr.net_npm_swiper@11_swiper-bundle.min.js'
 export const slider = () =>{
     const slides = document.querySelectorAll('.swiper-slide');
 
@@ -46,7 +47,7 @@ export const slider = () =>{
         slides[i].dataset.id = i;
         slides[i].style.backgroundImage = `url(${datasetSlides[i]})`;
         const capital = slides[i].querySelector('.capital-name');
-        const country = slides[i].querySelector('.country-name');
+        const country = slides[i].querySelector('.capital-description');
         // capital.textContent = dataSetSlidesText[i].city;
         // country.textContent = dataSetSlidesText[i].description;
     }
@@ -83,5 +84,8 @@ export const slider = () =>{
             nextEl:'.swiper-button-next'
         },
     })
+    if (window.outerWidth <= '425px'){
+        console.log("it's phone")
+    }
 }
 
