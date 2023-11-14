@@ -48,8 +48,8 @@ export const slider = () =>{
         slides[i].style.backgroundImage = `url(${datasetSlides[i]})`;
         const capital = slides[i].querySelector('.capital-name');
         const country = slides[i].querySelector('.capital-description');
-        // capital.textContent = dataSetSlidesText[i].city;
-        // country.textContent = dataSetSlidesText[i].description;
+        capital.textContent = dataSetSlidesText[i].city;
+        country.textContent = dataSetSlidesText[i].description;
     }
 
 //     function showPreviousSlide() {
