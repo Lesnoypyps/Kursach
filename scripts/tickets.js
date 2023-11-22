@@ -1,8 +1,13 @@
-import {createHeader} from "./header";
-import {createFooter} from "./footer";
+import {createHeader} from "./header.js";
+import {createFooter} from "./footer.js";
+import {createTickets} from "./createTickets.js";
 
 
 const init = () => {
     createHeader()
+    const formContainer = document.querySelector('.form-container');
+    formContainer.remove()
     createFooter()
+    createTickets()
 }
+init()
