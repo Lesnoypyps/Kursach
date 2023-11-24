@@ -9,8 +9,9 @@ const init = () =>{
     createHeader()
     createFooter()
     slider()
-    sendData()
     calendarInit()
+    sendData()
+
     console.log(new Date())
 }
 

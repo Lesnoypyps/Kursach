@@ -71,7 +71,7 @@ body{
     align-items: center;
 
 }
-.submit{
+.btn{
     border: 0;
     border-radius: 5px;
     background-color: #FF9243;
@@ -88,7 +88,7 @@ body{
     font-size: 14px;
     color: grey;
 }
-.main{
+.main,.tickets{
     max-width: 1150px;
     margin: 0 auto;
     flex: 1 0 auto;
@@ -245,12 +245,44 @@ body{
 .burger-menu-line:before{
     top: 0;
 }
+.tickets{
+    display: none;
+}
+.ticket{
+    display: flex;
+
+    width: 700px;
+}
+.companies--img{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.ticket__right-block{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+}
+.toPoA{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+
+}
+.ticket>div{
+    padding: 10px;
+}
+.choose-btn{
+    font-size: 14px;
+}
 @media screen and (max-width:426px){
     p{
         font-size: 14px;
     }
 
-    .main,.header__wrapper,.footer__wrapper{
+    .main,.header__wrapper,.footer__wrapper,.tickets{
         max-width: 360px;
     }
     .header__wrapper{

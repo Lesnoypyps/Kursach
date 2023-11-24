@@ -3,11 +3,9 @@ import {createFooter} from "./footer.js";
 import {createTickets} from "./createTickets.js";
 
 
-const init = () => {
-    createHeader()
+export const initTickets = () => {
     const formContainer = document.querySelector('.form-container');
     formContainer.remove()
-    createFooter()
     createTickets()
 }
 init()
