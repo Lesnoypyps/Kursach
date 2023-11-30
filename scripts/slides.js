@@ -12,37 +12,37 @@ export const slider = () =>{
     ];
     let dataSetSlidesText = [
         {
-            city:'Fiji Island',
+            city:'Острова Фиджи',
             description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ' +
                 'Dolore excepturi iusto nulla. ' +
                 'Distinctio doloremque exercitationem explicabo harum impedit in iste magnam, modi neque nesciunt nihil repudiandae sint sit unde ut?',
         },
         {
-            city:'Saint Petersburg',
+            city:'Санкт-Петербург',
             description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ' +
                 'Dolore excepturi iusto nulla. ' +
                 'Distinctio doloremque exercitationem explicabo harum impedit in iste magnam, modi neque nesciunt nihil repudiandae sint sit unde ut?',
         },
         {
-            city:'Moscow',
+            city:'Москва',
             description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ' +
                 'Dolore excepturi iusto nulla. ' +
                 'Distinctio doloremque exercitationem explicabo harum impedit in iste magnam, modi neque nesciunt nihil repudiandae sint sit unde ut?',
         },
         {
-            city:'New York',
+            city:'Нью-Йорк',
             description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ' +
                 'Dolore excepturi iusto nulla. ' +
                 'Distinctio doloremque exercitationem explicabo harum impedit in iste magnam, modi neque nesciunt nihil repudiandae sint sit unde ut?',
         },
         {
-            city:'Paris',
+            city:'Париж',
             description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ' +
                 'Dolore excepturi iusto nulla. ' +
                 'Distinctio doloremque exercitationem explicabo harum impedit in iste magnam, modi neque nesciunt nihil repudiandae sint sit unde ut?',
         },
         {
-            city:'Tel Aviv',
+            city:'Тель-Авив',
             description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ' +
             'Dolore excepturi iusto nulla. ' +
                 'Distinctio doloremque exercitationem explicabo harum impedit in iste magnam, modi neque nesciunt nihil repudiandae sint sit unde ut?'
@@ -62,7 +62,7 @@ export const slider = () =>{
             country.textContent = dataSetSlidesText[i].description + '...'
         }
     }
-    const swiper = new Swiper('.swiper',{
+    const swiperInit = new Swiper('.swiper',{
         direction:'horizontal',
         loop:true,
 
@@ -70,15 +70,24 @@ export const slider = () =>{
             prevEl:'.swiper-button-prev',
             nextEl:'.swiper-button-next'
         },
-        slidesPerView:3,
+        breakpoints:{
+            425:{
+                slidesPerView:1
+            },
+            426:{
+                slidesPerView:3
+            }
+        },
+        range:{
+
+            max:'2023-12-10'
+        },
+
         spaceBetween:'10px',
 
     })
-    if (window.innerWidth <= '425px'){
-        swiper.slidesPerView = 1;
-    }
-    if (window.outerWidth <= '425px'){
-        console.log("it's phone")
-    }
+
+
+
 }
 

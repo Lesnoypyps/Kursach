@@ -1,6 +1,8 @@
-@import 'fonts.css';
-@import 'cdn.jsdelivr.net_npm_swiper@11_swiper-bundle.min.css';
-@import 'vanilla-calendar.min.css';
+@import  "./fonts.css ";
+@import  "./cdn.jsdelivr.net_npm_swiper@11_swiper-bundle.min.css";
+@import './vanilla-calendar.min.css';
+@import  "../themes/dark.min.css";
+@import "../themes/light.min.css";
 *{
     margin: 0;
     padding:0;
@@ -16,6 +18,10 @@ body{
 
 .header,.footer{
     background-color: #0085FF;
+}
+.header{
+    background-image: url("../image/header-background.png");
+    background-size: cover;
 }
 
 .header__wrapper,.footer__wrapper{
@@ -123,7 +129,7 @@ body{
     color: white;
     font-size: 15px;
 }
-.slider__header{
+.slider__header,.heading{
     padding-bottom:10px ;
     font-size: 20px;
     display: flex;
@@ -171,9 +177,9 @@ body{
 }
 .stock-gradient-image{
     border-radius: 20px;
-    background: linear-gradient(90deg, #FF9243 0.3%, rgba(255, 146, 67, 0.00) 120%), url('../image/city-orange.jpg');
+    background: linear-gradient(90deg, #FF9243 0.3%, rgba(255, 146, 67, 0.00) 200%), url('../image/city-orange.jpg');
     background-size: cover;
-    width: 253px;
+    width: 590px;
     height: 147px;
     flex-shrink: 0;
     overflow: hidden;
@@ -205,6 +211,7 @@ body{
 .footer {
     /* Чтобы footer не уменьшался */
     flex-shrink: 0;
+    margin-top: 10px;
 }
 .swiper-button-next::after,.swiper-button-prev::after{
     color: white;
@@ -250,8 +257,12 @@ body{
 }
 .ticket{
     display: flex;
+    background-color:white ;
+    width: 750px;
+    border-radius:10px;
+    height: 160px;
+    margin-top: 20px;
 
-    width: 700px;
 }
 .companies--img{
     width: 24px;
@@ -261,21 +272,91 @@ body{
 }
 .ticket__right-block{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
     width: 100%;
+    border-left: 1px #E6E6E6 solid;
+}
+.ticket__left-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.DoA,.DoD{
+    color:#A9A9A9 ;
+}
+.toPoA,.toPoD{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    gap: 15px;
 
 }
-.toPoA{
-    display: flex;
+.toPoD{
+    border-top: 1px #E6E6E6 solid;
     width: 100%;
-    gap: 10px;
-
+    padding-top: 10px;
+}
+.PoD,.PoA{
+    width: 160px;
 }
 .ticket>div{
     padding: 10px;
 }
 .choose-btn{
     font-size: 14px;
+}
+.ticket__price,.companies__heading{
+    font-weight: bold;
+}
+.modal{
+    filter: blur(2px);
+    display: flex;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    visibility: hidden;
+    flex-flow: column nowrap;
+    justify-content: center; /* см. ниже */
+    align-items: center;
+    z-index: 99;
+    /* Чтобы окно не прилипало к границе
+    браузера установим отступы */
+    padding:30px 0;
+    backdrop-filter: blur(0px);
+    transition: all .5s linear;
+}
+.modal__wrapper{
+    backdrop-filter: blur(10px);
+}
+.visible{
+    backdrop-filter: blur(10px);
+    visibility: visible;
+    filter: blur(0px);
+}
+.tickets__empty{
+    margin-top: 50px;
+}
+.about{
+    margin-top: 20px;
+}
+.about__info{
+    font-size: 24px;
+    max-width: 350px;
+}
+.modal__content{
+    padding: 30px;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 0 7px black;
+
 }
 @media screen and (max-width:426px){
     p{
@@ -284,6 +365,9 @@ body{
 
     .main,.header__wrapper,.footer__wrapper,.tickets{
         max-width: 360px;
+    }
+    .footer__wrapper{
+        justify-content: space-between;
     }
     .header__wrapper{
         justify-content: space-between;
@@ -323,6 +407,23 @@ body{
     .submit{
         grid-column-start: 1;
         grid-column-end: 3;
+    }
+    .ticket{
+        width:350px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .choose-btn{
+        display: none;
+    }
+    .ticket__left-block{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .travelTime--arrow{
+        display: none;
     }
     .stock{
         max-height: 200px;

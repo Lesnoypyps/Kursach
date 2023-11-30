@@ -6,7 +6,6 @@ export const createFooter = () =>{
                 <div class="footer__logo">
                     <a href="#" class="logo__link">
                         <img class="logo__icon icon" src="./image/logo__img.svg" alt="Logo">
-    <!--                    <p class="logo__text">TicketSale</p>-->
                     </a>
                 </div>
                 <div class="footer__slogan">
@@ -22,5 +21,4 @@ export const createFooter = () =>{
                 </div>
               </div> 
 `)
-    // footer.append(time)
 }

@@ -1,5 +1,4 @@
-import {createHeader} from "./header.js";
-import {createFooter} from "./footer.js";
+
 import {createTickets} from "./createTickets.js";
 
 
@@ -8,4 +7,4 @@ export const initTickets = () => {
     formContainer.remove()
     createTickets()
 }
-init()
+

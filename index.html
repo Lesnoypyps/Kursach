@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/styles.css">
-    <link rel="stylesheet" href="/style/vanilla-calendar.min.css">
-    <link rel="stylesheet" href="/themes/dark.min.css">
-    <link rel="stylesheet" href="/themes/light.min.css">
+    <link rel="stylesheet" href="./style/vanilla-calendar.min.css">
+    <link rel="stylesheet" href="./themes/dark.min.css">
+    <link rel="stylesheet" href="./themes/light.min.css">
     <script src="./scripts/vanilla-calendar.min.js" defer></script>
     <script src="./scripts/index.js" type="module" defer></script>
     <title>TicketSale</title>
@@ -19,7 +19,7 @@
     <main class="main">
         <div class="swiper">
             <div class="slider__header">
-                <h3 class="header__heading" style="color: black">Популярные города</h3>
+                <h3 class="header__heading heading" style="color: black">Популярные города</h3>
             </div>
             <div class="swiper-wrapper">
                 <div class="swiper-slide slide">
@@ -53,49 +53,26 @@
 
         <div class="stock">
             <div class="stock__content">
-                <h2 class="stock__heading">Скидка 20%</h2>
+                <h3 class="stock__heading heading">Скидка 20%</h3>
                 <p class="stock__descr">Скидку можно получить при покупке билета от 8000 рублей</p>
-                <button class="stock__buy">
-                    Оформить билет
-                    <img class="button-arrow" src="image/arrow.svg" alt="">
-                </button>
             </div>
             <div class="stock-gradient-image">
 
             </div>
         </div>
-    </main>
-    <section class="tickets">
-        <div class="ticket">
-            <div class="ticket__left-block">
-                <div class="ticket__price">9999P</div>
-                <div class="ticket__companies">
-                    <p class="companies__heading">Авиакомпании:</p>
-                    <img src="./image/aeroflot-image.png" alt="" srcset="" class="companies--img">
-                    <img src="./image/s7-image.jpg" alt="" srcset="" class="companies--img">
-                </div>
-                <button class="choose-btn btn">Выбрать билет</button>
-            </div>
-            <div class="ticket__right-block">
-                <div class="toPoA">
-                    <div class="PoD">
-                        <h3 class="ToD">21:30</h3>
-                        <p class="DoD">Москва, 21 нояб, чт</p>
-                    </div>
-                    <div class="travel">
-                        <p class="travel__time">В пути: 1ч 20 минут</p>
-                        <img src="./image/arrow-travel.svg" alt="" srcset="" class="travelTime--arrow">
-                    </div>
-                    <div class="PoA">
-                        <h3 class="ToA">22:30</h3>
-                        <p class="DoA">Санкт-Петербург, 21 нояб, чт</p>
-                    </div>
-                </div>
-                <div class="toPoD">
+        <div class="about">
+            <div class="heading">
+                <h3 class="about__header heading">О нас</h3>
 
-                </div>
+            </div>
+            <div class="about__info">
+                <p class="information">Наша компания только вышла на рынок,но готова предоставлять услуги, благодаря вашей поддержке. Если хотите нас поддержать, то перейдите по ссылке</p>
+                <a href="https://www.donationalerts.com/r/lesnoy_pypsik" class="support">Поддержать разработчика</a>
             </div>
         </div>
+    </main>
+    <section class="tickets">
+
     </section>
     <footer class="footer">
 
