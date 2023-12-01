@@ -20,7 +20,6 @@ export const createHeader = () =>{
                 <img class="profile__icon icon" src="./image/profile-icon.svg" style="width: 30px" alt="profile">
                 <div class="burger-menu">
                     <div class="burger-menu-line">
-                    
                     </div>
                 </div>
             </div>
@@ -33,13 +32,13 @@ export const createHeader = () =>{
                 </div>
                 <div class="ticket-found__input">
                     <form action="../tickets.html" method="post" class="form-found">
-                        <input type="text" class="from fast-found" placeholder="Откуда" name="PoD"><input type="text" class=" fast-found" placeholder="Куда" name="PoA">
-                        <input type="text" class="text fast-found" id="inputDep" name="DoD" placeholder="Туда"> <input type="text" class="text fast-found" id="inputArrive" name="DoA" placeholder="Обратно">
+                        <input type="text" class="from fast-found" id="inputFrom" placeholder="Откуда" name="PoD" required><input type="text" class="fast-found" id="inputWhere" placeholder="Куда" name="PoA" required>
+                        <input type="text" class="text fast-found" id="inputDep" name="DoD" placeholder="Туда" required> <input type="text" class="text fast-found" id="inputArrive" name="DoA" placeholder="Обратно">
                         <div class="fast-found f-f-block">
                             <p class="flight-class">Эконом</p>
                             <p class="fast-found__passenger">1 пассажир</p>
                         </div>
-                        <input type="submit" value="Найти билеты" class="btn">
+                        <input type="submit" value="Найти билеты" class="btn found-btn">
                     </form>
                 </div>
             </div>

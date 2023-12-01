@@ -78,16 +78,19 @@ export const slider = () =>{
                 slidesPerView:3
             }
         },
-        range:{
-
-            max:'2023-12-10'
-        },
 
         spaceBetween:'10px',
 
     })
-
-
-
+    const swiper = document.querySelector('.swiper').swiper;
+    swiper.slidesPerView = 1
+    window.addEventListener('resize', () =>{
+        if (window.clientWidth <= '425px'){
+            swiper.slidesPerView = 1;
+        }
+    })
+    if (window.outerWidth <= '425px'){
+        console.log("it's phone")
+    }
 }
 

@@ -10,8 +10,9 @@ export const createTickets = async(data) =>{
         month: "short",
         day: "numeric",
     };
-    console.log(data)
-    if (data.arrive){
+    ticketsWrapper.innerHTML = '';
+    console.log(data.arrive);
+    if (data.arrive != [] &&  typeof data.arrive !== "undefined"){
         ticketsWrapper.innerHTML = '';
         for(let ticketD in data.depart){
             for(let ticketA in data.arrive){
@@ -26,8 +27,6 @@ export const createTickets = async(data) =>{
                         let getDate = (str) =>{
                             return new Date(0, 0, 0, str.split(':')[0],str.split(':')[1]);
                         }
-                        console.log(secondDateDepart)
-
                         let diff = (getDate(secondDateDepart) - getDate(firstDateDepart));
                         let diffRes, hours, minutes ;
                         if (diff > 0){
@@ -64,7 +63,7 @@ export const createTickets = async(data) =>{
                                 </div>
                                 <div class="PoA">
                                     <h3 class="ToA">${data.depart[ticketD].ToA}</h3>
-                                    <p class="DoA">${data.depart[ticketD].PoA}, ${PoDA.slice(4,6).trim()} ${PoDA.slice(6,11).trim()}, ${PoDA.slice(0,2).trim()}</p>
+                                    <p class="DoA">${data.depart[ticketD].PoA}, ${PoDA.slice(3,6).trim()} ${PoDA.slice(6,11).trim()}, ${PoDA.slice(0,2).trim()}</p>
                                 </div>
                             </div>
                             <div class="toPoD">
@@ -84,15 +83,19 @@ export const createTickets = async(data) =>{
                         </div>
                     </div>`
                     ticketsWrapper.insertAdjacentHTML('beforeend', tickets)
+                    
                 }
+                
             }
+            
         }
+        console.log('This condition1212121');
     }else{
         ticketsWrapper.innerHTML = '';
         for( let ticketId in data.depart){
-            console.log()
+
             const PoDD = new Date(data.depart[ticketId].DoD).toLocaleString('ru', options);
-            console.log(PoDD)
+
             const PoDA = new Date(data.depart[ticketId].DoA).toLocaleString('ru', options);
             const ticketsWrapper = document.querySelector('.tickets');
             const getTimeOfTravel = (ToD , ToA) =>{
@@ -101,7 +104,7 @@ export const createTickets = async(data) =>{
                 let getDate = (str) =>{
                     return new Date(0, 0, 0, str.split(':')[0],str.split(':')[1]);
                 }
-                console.log(secondDateDepart)
+
 
                 let diff = (getDate(secondDateDepart) - getDate(firstDateDepart));
                 let diffRes, hours, minutes ;
@@ -132,7 +135,7 @@ export const createTickets = async(data) =>{
                     <div class="toPoA">
                         <div class="PoD">
                             <h3 class="ToD">${data.depart[ticketId].ToD}</h3>
-                            <p class="DoD">${data.depart[ticketId].PoD}, ${PoDD.slice(4,6)} ${PoDD.slice(7,12)}, ${PoDD.slice(0,2)}</p>
+                            <p class="DoD">${data.depart[ticketId].PoD}, ${PoDD.slice(3,6)} ${PoDD.slice(6,11)}, ${PoDD.slice(0,2)}</p>
                         </div>
                         <div class="travel">
                             <p class="travel__time">В пути: ${getTimeOfTravel(data.depart[ticketId].ToD,data.depart[ticketId].ToA).slice(0,1)} ч ${getTimeOfTravel(data.depart[ticketId].ToD,data.depart[ticketId].ToA).slice(2)} минут</p>
@@ -140,15 +143,15 @@ export const createTickets = async(data) =>{
                         </div>
                         <div class="PoA">
                             <h3 class="ToA">${data.depart[ticketId].ToA}</h3>
-                            <p class="DoA">${data.depart[ticketId].PoA}, ${PoDA.slice(4,6)} ${PoDA.slice(7,12)}, ${PoDA.slice(0,2)}</p>
+                            <p class="DoA">${data.depart[ticketId].PoA}, ${PoDA.slice(3,6)} ${PoDA.slice(6,11)}, ${PoDA.slice(0,2)}</p>
                         </div>
                     </div>
-                    
                 </div>
             </div>`
             ticketsWrapper.insertAdjacentHTML('beforeend',tickets);
-
+            
         }
+        console.log('This condition0');
     }
     if (data.depart.length === 0){
         ticketsWrapper.innerHTML = '';

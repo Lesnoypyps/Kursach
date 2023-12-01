@@ -8,6 +8,7 @@ export const calendarInit = () =>{
         settings: {
             range: {
                 disablePast: true,
+                max:'2023-12-10'
             },
             selection: {
                 day: 'multiple-ranged',

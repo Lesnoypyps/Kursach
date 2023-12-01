@@ -349,7 +349,7 @@ body{
 }
 .about__info{
     font-size: 24px;
-    max-width: 350px;
+    max-width: 400px;
 }
 .modal__content{
     padding: 30px;
@@ -358,6 +358,18 @@ body{
     box-shadow: 0 0 7px black;
 
 }
+.about__header{
+    width: 100%;
+}
+
+.about__info{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 10px;
+}
 @media screen and (max-width:426px){
     p{
         font-size: 14px;
@@ -365,9 +377,6 @@ body{
 
     .main,.header__wrapper,.footer__wrapper,.tickets{
         max-width: 360px;
-    }
-    .footer__wrapper{
-        justify-content: space-between;
     }
     .header__wrapper{
         justify-content: space-between;
@@ -438,5 +447,8 @@ body{
     }
     .swiper-wrapper .swiper-slide{
         break-inside: avoid;
+    }
+    .footer__wrapper{
+        gap: 20px;
     }
 }

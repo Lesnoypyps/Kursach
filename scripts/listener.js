@@ -9,7 +9,7 @@ export const noTicketsRedirect = () =>{
     window.addEventListener('click', ({target}) =>{
         if (window.innerWidth <= 425){
             if (target.closest('.ticket')){
-                console.log(target.closest('.ticket'))
+
                 const body = document.body
                 const modal = `
                  <div class="modal visible">

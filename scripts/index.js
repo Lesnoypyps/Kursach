@@ -16,7 +16,7 @@ const init = () =>{
     calendarInit()
     sendData()
     debug()
-    console.log(new Date())
+
 }
 
 init()
